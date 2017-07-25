@@ -11,7 +11,7 @@ class ArtistSpider(scrapy.Spider):
 
     def start_requests(self):
         base_url = 'https://api.deezer.com/artist/'
-        for i in xrange(100000, 100050):
+        for i in xrange(1, 1000000):
             url = base_url + str(i)
             yield scrapy.Request(url=url, headers=self.headers, callback=self.parse)
 
